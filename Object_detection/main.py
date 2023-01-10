@@ -1,0 +1,1 @@
+import cv2import numpy as npclassesFile = "coco.names"classNames = []with open(classesFile, "rt") as f:    classNames = f.read().rstrip("\n").split("\n")print(classNames)print(len(classNames))cap = cv2.VideoCapture("C:/Users/drish/Downloads/traffic.mp4")while True:    success, img = cap.read()    cv2.imshow("Image", img)    cv2.waitKey(1)
